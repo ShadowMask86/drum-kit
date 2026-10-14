@@ -1,3 +1,4 @@
+/* Theme colors used throughout the Drum Kit. */
 :root {
   --background-color: #283149;
   --text-color: #DBEDF3;
@@ -5,6 +6,7 @@
   --border-color: #404B69;
 }
 
+/* Base page layout and background. */
 body {
   text-align: center;
   background-color: var(--background-color);
@@ -12,6 +14,7 @@ body {
   min-height: 100vh;
 }
 
+/* Main page heading. */
 h1 {
   font-size: clamp(2rem, 8vw, 5rem);
   color: var(--text-color);
@@ -19,12 +22,14 @@ h1 {
   text-shadow: 3px 0 var(--accent-color);
 }
 
+/* Footer text styling. */
 footer {
   color: var(--text-color);
   font-family: sans-serif;
   padding: 1rem;
 }
 
+/* Drum background images mapped to their respective keys. */
 .w {
   background-image: url("images/tom1.png");
 }
@@ -53,11 +58,13 @@ footer {
   background-image: url("images/kick.png");
 }
 
+/* Spacing and alignment for the drum button set. */
 .set {
   margin: 10% auto;
   padding: 0 1rem;
 }
 
+/* Visual feedback displayed when the game ends. */
 .game-over {
   background-color: red;
   opacity: 0.8;
@@ -69,10 +76,12 @@ footer {
   opacity: 0.5;
 }
 
+/* Retained red text utility class. */
 .red {
   color: red;
 }
 
+/* Shared appearance and dimensions of all drum buttons. */
 .drum {
   box-sizing: border-box;
   border: 10px solid var(--border-color);
@@ -98,11 +107,13 @@ footer {
   transition: opacity 0.1s ease, box-shadow 0.1s ease;
 }
 
+/* Visible keyboard-focus indicator for drum buttons. */
 .drum:focus-visible {
   outline: 3px solid var(--text-color);
   outline-offset: 4px;
 }
 
+/* Adjust button borders and spacing on smaller screens. */
 @media (max-width: 480px) {
   .drum {
     border-width: 6px;
@@ -114,6 +125,7 @@ footer {
   }
 }
 
+/* Disable button transitions for users who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
   .drum {
     transition: none;
